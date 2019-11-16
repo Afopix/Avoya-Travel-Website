@@ -19,6 +19,17 @@ h1 {
   background-position-y: -20em;
 }
 
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 35px;
+}
+
+/* imgs that are children of the 'gallery' div */
+div.gallery > img {
+  max-width: 600px;
+}
+
 /* .overlay {
   background: white;
   opacity: 0.2;
@@ -42,5 +53,20 @@ h1 {
 @media (max-width: 600px) {
   .hero {
     background-position-y: -10em;
+  }
+}
+
+/* mobile layout */
+
+@media (max-width: 450px) {
+  .content {
+    width: 100%;
+  }
+  .gallery {
+    grid-template-columns: 1fr;
+    grid-gap: 0px;
+  }
+  div.gallery > img {
+    max-width: 100%;
   }
 }
